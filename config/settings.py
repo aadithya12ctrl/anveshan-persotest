@@ -17,8 +17,8 @@ class Settings(BaseSettings):
     )
 
     app_env: Environment = Environment.DEVELOPMENT
-    secret_key: str = "change-me-in-production"
-    database_url: str = "postgresql+asyncpg://user:password@localhost:5432/agentic_layer"
+    secret_key: str 
+    database_url: str 
     redis_url: str = "redis://localhost:6379/0"
 
     @property
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
 
     @property
     def debug(self) -> bool:
-        return not self.is_production
+        return self.app_env == Environment.DEVELOPMENT
 
 
 settings = Settings()

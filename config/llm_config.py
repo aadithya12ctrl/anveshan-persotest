@@ -23,11 +23,11 @@ class LLMConfig(BaseSettings):
 
     @property
     def chat_endpoint(self) -> str:
-        return f"{self.llm_base_url}/api/chat"
+        return f"{self.llm_base_url.rstrip('/')}/api/chat"
 
     @property
     def generate_endpoint(self) -> str:
-        return f"{self.llm_base_url}/api/generate"
+        return f"{self.llm_base_url.rstrip('/')}/api/generate"
 
 
 llm_config = LLMConfig()
