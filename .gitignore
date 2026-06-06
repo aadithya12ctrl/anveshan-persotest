@@ -142,3 +142,20 @@ cython_debug/
 .idea/
 *.swp
 *.swo
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
